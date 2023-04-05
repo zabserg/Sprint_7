@@ -6,12 +6,12 @@ import io.restassured.specification.RequestSpecification;
 
 public class Config {
 
-    public static final String MAIN_URL = "https://qa-scooter.praktikum-services.ru";
+    public static final String BASE_URL = "https://qa-scooter.praktikum-services.ru";
     public static final String COURIER_URL = "/api/v1/courier/";
     public static final String ORDERS_URL = "api/v1/orders";
-    public static RequestSpecification getRqSpec() {
+    public static RequestSpecification getRequestSpec() {
         return new RequestSpecBuilder()
-                .setBaseUri(MAIN_URL)
+                .setBaseUri(BASE_URL)
                 .setContentType(ContentType.JSON)
                 .build();
     }
